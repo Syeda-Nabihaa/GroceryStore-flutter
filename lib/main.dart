@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerystore/BottomNavigation.dart';
 import 'package:grocerystore/Splash_Screen.dart';
 import 'package:grocerystore/shop.dart';
 
@@ -69,7 +70,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return Shop();
+                        return Bottomnavigation();
                       },
                     ),
                   );
