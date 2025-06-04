@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocerystore/BottomNavigation.dart';
+import 'package:grocerystore/Cart.dart';
 import 'package:grocerystore/Splash_Screen.dart';
-import 'package:grocerystore/shop.dart';
+// import 'package:grocerystore/shop.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Grocery Store',
-      home: SplashScreen(),
+      home: Cart(),
     );
   }
 }

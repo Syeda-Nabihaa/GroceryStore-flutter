@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerystore/Cart.dart';
 import 'package:grocerystore/Explore.dart';
 import 'package:grocerystore/shop.dart';
 
@@ -15,7 +16,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
   final List<Widget> pages = [
     Shop(),
     Explore(),
-    Center(child: Text("Cart")),
+    Cart(),
     Center(child: Text("Favorites")),
     Center(child: Text("Account")),
   ];

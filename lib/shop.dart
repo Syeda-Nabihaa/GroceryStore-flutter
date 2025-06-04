@@ -62,13 +62,7 @@ class _ShopState extends State<Shop> {
     ),
   ];
 
-  int selectedIndex = 0;
-  final List<Widget> pages = [Shop(), Explore()];
-   void onItemTapped(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
-  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -213,6 +207,7 @@ class _ShopState extends State<Shop> {
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             FloatingActionButton(
+                              heroTag: null,
                               onPressed: () {},
                               mini: true,
                               backgroundColor: Colors.green,
@@ -233,32 +228,7 @@ class _ShopState extends State<Shop> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIndex,
-        onTap: onItemTapped,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.store, color: Colors.black),
-            label: 'shop',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.manage_search, color: Colors.black),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag_outlined, color: Colors.black),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite, color: Colors.black),
-            label: 'favorite',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded, color: Colors.black),
-            label: 'Account',
-          ),
-        ],
-      ),
+      
     );
   }
 }
