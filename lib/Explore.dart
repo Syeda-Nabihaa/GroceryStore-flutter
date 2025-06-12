@@ -67,7 +67,7 @@ class _ExploreState extends State<Explore> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 16.0,
+            horizontal: 28.0,
           ), // ← consistent side padding
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,8 +119,9 @@ class _ExploreState extends State<Explore> {
                 itemBuilder: (context, index) {
                   final products = prod[index];
                   return Container(
-                    // height: 200,
-                    // width: 200,
+                    height: 200,
+                    width: 200,
+                  
                     decoration: BoxDecoration(
                       color: products.color,
                       border: Border.all(
@@ -132,6 +133,7 @@ class _ExploreState extends State<Explore> {
                       ), // Optional: adds rounded corners
                     ),
                     child: Column(
+                      
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(products.image),
@@ -140,7 +142,7 @@ class _ExploreState extends State<Explore> {
                           products.title,
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
